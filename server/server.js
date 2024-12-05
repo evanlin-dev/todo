@@ -10,4 +10,4 @@ app.use(cors());
 app.use(express.json());
 app.use("/task", tasks);
 
-export const handler = serverless(app);
+export default serverless(app);
