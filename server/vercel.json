@@ -2,17 +2,15 @@
     "version": 2,
     "builds": [
       {
-        "src": "server.js",
+        "src": "server/server.js",
         "use": "@vercel/node"
       }
     ],
-    "env": {
-      "ATLAS_URI": "@your-mongodb-atlas-uri"
-    },
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "server.js"
+        "src": "/task/(.*)",
+        "dest": "/server/server.js"
       }
     ]
-}  
+  }
+  
