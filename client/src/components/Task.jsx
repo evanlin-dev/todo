@@ -14,7 +14,7 @@ export default function Task() {
     async function fetchData() {
       const id = params.id?.toString() || undefined;
       if (!id) return;
-      const response = await fetch(`http://localhost:5050/task/${params.id}`);
+      const response = await fetch(`http://todo-gctn.vercel.app/task/${params.id}`);
       if (!response.ok) {
         console.error(`An error occurred: ${response.statusText}`);
         return;
@@ -38,7 +38,7 @@ export default function Task() {
     e.preventDefault();
     const task = { ...form };
     try {
-      const response = await fetch(`http://localhost:5050/task${params.id ? "/" + params.id : ""}`, {
+      const response = await fetch(`http://todo-gctn.vercel.app/task${params.id ? "/" + params.id : ""}`, {
         method: `${params.id ? "PATCH" : "POST"}`,
         headers: {
           "Content-Type": "application/json",

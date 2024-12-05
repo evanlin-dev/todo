@@ -32,7 +32,7 @@ export default function TaskList() {
 
   useEffect(() => {
     async function getTasks() {
-      const response = await fetch(`http://localhost:5050/task/`);
+      const response = await fetch(`http://todo-gctn.vercel.app/task/`);
       if (!response.ok) {
         const message = `An error occurred: ${response.statusText}`;
         console.error(message);
@@ -45,10 +45,10 @@ export default function TaskList() {
   }, []);
 
   async function deleteTask(id) {
-    await fetch(`http://localhost:5050/task/${id}`, {
+    await fetch(`http://todo-gctn.vercel.app/task/${id}`, {
       method: "DELETE",
     });
-    const response = await fetch(`http://localhost:5050/task/`);
+    const response = await fetch(`http://todo-gctn.vercel.app/task/`);
     const updatedTasks = await response.json();
     setTasks(updatedTasks);
   }
