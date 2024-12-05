@@ -10,4 +10,6 @@ app.use(cors());
 app.use(express.json());
 app.use("/task", tasks);
 
-export default serverless(app);
+app.listen(PORT, () => {
+  console.log(`Server listening on port ${PORT}`);
+});
