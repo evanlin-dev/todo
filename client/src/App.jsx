@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom";
-import Navbar from "./components/Navbar";
+import NavBar from "./components/NavBar";
 
 const App = () => {
   return (
     <div className="w-full p-6">
-      <Navbar />
+      <NavBar />
       <Outlet />
     </div>
   );

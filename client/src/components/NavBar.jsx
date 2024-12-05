@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Button, AppBar, Toolbar, Typography, Box } from '@mui/material';
 
-export default function Navbar() {
+export default function NavBar() {
   return (
     <AppBar position="static" sx={{ background: "transparent", boxShadow: "none" }}>
       <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
