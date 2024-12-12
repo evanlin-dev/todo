@@ -5,7 +5,7 @@ import { TextField, Button, Container, Typography } from '@mui/material';
 export default function Task() {
   const [form, setForm] = useState({
     name: "",
-    date: "", 
+    date: "",
   });
   const params = useParams();
   const navigate = useNavigate();
@@ -45,7 +45,7 @@ export default function Task() {
         },
         body: JSON.stringify(task),
       });
-  
+
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }

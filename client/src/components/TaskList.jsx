@@ -7,18 +7,18 @@ const Task = (props) => (
     <TableCell>{props.task.name}</TableCell>
     <TableCell>{props.task.date}</TableCell>
     <TableCell>
-      <Button 
-        variant="contained" 
-        color="primary" 
-        component={Link} 
+      <Button
+        variant="contained"
+        color="primary"
+        component={Link}
         to={`/edit/${props.task._id}`}
         sx={{ marginRight: 1 }}
       >
         Edit
       </Button>
-      <Button 
-        variant="contained" 
-        color="secondary" 
+      <Button
+        variant="contained"
+        color="secondary"
         onClick={() => props.deletetask(props.task._id)}
       >
         Delete
@@ -64,6 +64,10 @@ export default function TaskList() {
 
   return (
     <>
+      <Typography variant="h5" gutterBottom>
+        <p>Link to view backend</p>
+        <a href="https://todo-gctn.vercel.app/task">View all posts</a>
+      </Typography>
       <Typography variant="h5" gutterBottom>
         Task List
       </Typography>
