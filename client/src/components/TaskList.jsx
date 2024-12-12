@@ -66,7 +66,7 @@ export default function TaskList() {
     <>
       <Typography variant="h5" gutterBottom>
         <p>Link to view backend</p>
-        <a href="https://todo-gctn.vercel.app/task">View all posts</a>
+        <a href="https://todo-gctn.vercel.app/task">View all tasks</a>
       </Typography>
       <Typography variant="h5" gutterBottom>
         Task List
